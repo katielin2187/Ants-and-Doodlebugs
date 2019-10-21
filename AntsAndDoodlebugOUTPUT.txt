@@ -1,0 +1,451 @@
+!!!Hello the classmates, it's time for fun with C++!!!
+////////////////////Grid & Cell tests: 
+Running the grid test
+Result: gridTest passed
+Running the cellOccupantOrganism test------------------
+Original Ant:0x563541273230
+Occupation Status:1
+Organism:0x563541273230
+Ant Organism was created
+Original Doodlebug:0x563541273250
+Occupation Status:2
+Organism:0x563541273250
+Doodlebug Organism was created
+
+Printing Occupant/Organism grid--before.
+---------
+---------
+--o------
+--x------
+---------
+---------
+---------
+---------
+---------
+Before:Ant Occ: 1
+Before:Ant Org: 0x563541273230
+Before:Doodle Occ: 2
+Before:Doodle Org: 0x563541273250
+Calling to delete ant.
+After:Ant Occ: 0
+After:Ant Org: 0x563541273230
+Test passed, ant organism was deleted.
+Calling to delete doodlebug.
+After:Doodle Occ: 0
+After:Doodle Org: 0x563541273250
+Test passed, doodlebug organism was deleted.
+Printing Occupant/Organism grid--after.
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+Calling to delete empty cell.
+Cannot delete organism.
+
+End of testing cellOccupantOrganismTests
+
+Result: cellOccupantOrganismTests passed
+Running the checkNieghbors test------------------
+Printing checkNeighborsTest grid.
+-------oo
+--------o
+--o------
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+
+Test 1: a2
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+Test 2: a3
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 1, expected:1
+--Same--i:3
+output: 0, expected:0
+
+Test 3: a4
+--Same--i:0
+output: 1, expected:1
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 1, expected:1
+--Same--i:3
+output: 1, expected:1
+
+Test 4: a5
+--Same--i:0
+output: 3, expected:3
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 3, expected:3
+--Same--i:3
+output: 1, expected:1
+
+End of testing neighbors
+
+Result: checkNeighbors passed
+Running the findFood test------------------
+Printing findFoodTest grid.
+-------ox
+--------o
+--o--x---
+-oxo-----
+--o------
+---------
+---------
+---------
+---------
+
+Test 1: a2
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+Test 2: a3
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+Test 3: d2
+--Same--i:0
+output: 1, expected:1
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 1, expected:1
+--Same--i:3
+output: 1, expected:1
+
+Test 4: a5
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 1, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 1, expected:0
+
+Test 5: d1
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+End of testing findFood
+
+Result: findFood passed
+Running the findMove test------------------
+Printing findMoveTest grid.
+-------oo
+--------o
+--o--x---
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+
+Test 1: a2
+--Same--i:0
+output: 1, expected:1
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 1, expected:1
+--Same--i:3
+output: 1, expected:1
+
+Test 2: a3
+--Same--i:0
+output: 1, expected:1
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 1, expected:1
+
+Test 3: a4
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+Test 4: a5
+--Same--i:0
+output: 0, expected:0
+--Same--i:1
+output: 0, expected:0
+--Same--i:2
+output: 0, expected:0
+--Same--i:3
+output: 0, expected:0
+
+Test 5: d1
+--Same--i:0
+output: 1, expected:1
+--Same--i:1
+output: 1, expected:1
+--Same--i:2
+output: 1, expected:1
+--Same--i:3
+output: 1, expected:1
+
+End of testing findMove
+
+Result: findMove passed
+Running the moveOrganism test------------------
+Printing moveOrganism grid.
+---------
+---------
+---------
+-ox------
+---------
+---------
+---------
+---------
+---------
+Call moveOrganism to move a1 from (3,1) to (2,1).
+
+---------
+---------
+-o-------
+--x------
+---------
+---------
+---------
+---------
+---------
+Ant(a1) moved. Pass.
+
+Call moveOrganism to move d1 from (3,2) to (4,2).
+
+---------
+---------
+-o-------
+---------
+--x------
+---------
+---------
+---------
+---------
+Doodlebug(d1) moved. Pass.
+
+
+End of testing moveOrganism
+
+Result: moveOrganism passed
+Running the printGridAndCell test------------------
+Printing printGrid grid.
+-------ox
+--------o
+--o--x---
+-oxo-----
+--o------
+---------
+---------
+---------
+---------
+Printing printCell for single cell from grid.
+
+Print doodlebug (0,8):
+
+x
+Print ant (3,3):
+
+o
+Print doodlebug (2,5):
+
+x
+Print ant (0,7):
+
+o
+End of testing printGridAndCell
+ Check console to see if print out is as expected.
+
+Result: printGrid and printCell passed
+////////////////////Ant tests: 
+Running the make ants test------------------
+---------
+--o------
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+Result: makeAntstest passed
+Running the move ants test-------------------
+Printing antsMoveTest grid -- before.
+-------oo
+--o-----o
+--o------
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+ Move status: false
+ Move status: false
+Ant(a4) did not move. Pass.
+
+Ant(corner case) did not move. Pass.
+
+ Move status: true
+Ant(a1) moved. Pass.
+
+ Move status: true
+Ant(a2) moved. Pass.
+
+Printing antsMovetest grid -- after.
+-------oo
+---o----o
+---o-----
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+Result: moveAntsTest passed
+Running the ant breed test-----------------------
+Printing antsBreedtest grid -- before.
+-------oo
+--o------
+--o------
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+ Breed status: true
+Printing antsBreedtest grid -- after.
+-------oo
+--o-----o
+--o------
+-ooo-----
+--o------
+---------
+---------
+---------
+---------
+Ant did breed. Pass.
+
+Result: antsBreedtest passed
+Running the eat ant test---------------------------
+Printing antsDieTest grid -- before.
+---
+-xo
+---
+Printing antsDieTestgrid -- after.
+---
+--x
+---
+Ant has died. Pass.
+
+Result: antsDieTest passed
+////////////////////Doodlebug tests: 
+Running the make doodlebugs test------------------------------
+Result: makeDoodlesTest passed
+Running the move doodlebugs test----------------------------
+ Eat status: false
+ Move status: true
+Result: doodleMoveTest passed
+Running the doodlebug breed test--------------------------
+Printing doodleBreedTest grid -- before.
+-------xx
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+ Breed status: false
+ Breed status: true
+ Breed status: true
+ Breed status: true
+Printing doodleBreedTest grid -- after.
+-------xx
+--------x
+---------
+---------
+---------
+---------
+---------
+---------
+---------
+Doodle did breed. Pass.
+
+Result: doodleBreedTest passed
+Running the eat ant test-----------------------------
+Printing doodleEatTest grid -- before.
+---
+-xo
+---
+Printing doodleEatTest grid -- after.
+---
+--x
+---
+Ant has been eaten. Pass.
+
+Result: doodleEatTest passed
+Running the doodlebug starves test---------------------------
+Result: doodleStarvetest passed
+Done with tests.
+Results: All tests passed
+Initial Board 
+--o
+x-o
+o--
+ 
+Current Board: 
+--o
+x-o
+o--
+Please enter a character to continue...
