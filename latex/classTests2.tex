@@ -1,0 +1,385 @@
+\section{Tests2 Class Reference}
+\label{classTests2}\index{Tests2@{Tests2}}
+
+
+{\ttfamily \#include $<$Tests2.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2} ()
+\item 
+bool \textbf{ do\+Tests} ()
+\item 
+bool \textbf{ grid\+Test} ()
+\item 
+bool \textbf{ make\+Ants\+Test} ()
+\item 
+bool \textbf{ ants\+Move\+Test} ()
+\item 
+bool \textbf{ ants\+Breed\+Test} ()
+\item 
+bool \textbf{ ants\+Die\+Test} ()
+\item 
+bool \textbf{ make\+Doodles\+Test} ()
+\item 
+bool \textbf{ doodle\+Move\+Test} ()
+\item 
+bool \textbf{ doodle\+Breed\+Test} ()
+\item 
+bool \textbf{ doodle\+Eat\+Test} ()
+\item 
+bool \textbf{ doodle\+Dietest} ()
+\item 
+bool \textbf{ cell\+Occupant\+Organism\+Tests} ()
+\item 
+bool \textbf{ check\+Neighbors\+Test} ()
+\item 
+bool \textbf{ find\+Food\+Test} ()
+\item 
+bool \textbf{ find\+Move\+Test} ()
+\item 
+bool \textbf{ move\+Organism\+Test} ()
+\item 
+bool \textbf{ print\+Grid\+And\+Cell\+Test} ()
+\item 
+virtual \textbf{ $\sim$\+Tests2} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classTests2_a6d7d8d248dd3d544199769baa1face60}} 
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\index{Tests2@{Tests2}!Tests2@{Tests2}}
+\subsubsection{Tests2()}
+{\footnotesize\ttfamily Tests2\+::\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function is the default constructor for a test object that instantiates an test object. \mbox{\label{classTests2_abed1a850ef511b7c06ae418cb3bbd5d9}} 
+\index{Tests2@{Tests2}!````~Tests2@{$\sim$\+Tests2}}
+\index{````~Tests2@{$\sim$\+Tests2}!Tests2@{Tests2}}
+\subsubsection{$\sim$\+Tests2()}
+{\footnotesize\ttfamily Tests2\+::$\sim$\+Tests2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function is a destructor that takes the Test object and deletes it once the program is done using the object. 
+
+Referenced by main().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classTests2_a21e7692afbdfb694caf370670cbeb7d4}} 
+\index{Tests2@{Tests2}!ants\+Breed\+Test@{ants\+Breed\+Test}}
+\index{ants\+Breed\+Test@{ants\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the ants\+Breed\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were puts(\char`\"{}\+Printing grid after.\char`\"{}); my\+Grid\+\_\+p-\/$>$print\+Grid();able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, Ant\+::breed(), empty, Grid\+::get\+Cell\+Occupant(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), Grid\+::set\+Cell\+Organism(), and Organism\+::set\+Step\+Count().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a045d58417814d72bcf4c97b2ebb51461}} 
+\index{Tests2@{Tests2}!ants\+Die\+Test@{ants\+Die\+Test}}
+\index{ants\+Die\+Test@{ants\+Die\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Die\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Die\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the ants\+Die\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Doodlebug\+::eat(), Grid\+::get\+Cell\+Occupant(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7694d2797eba6fadc40234d527f6afbe}} 
+\index{Tests2@{Tests2}!ants\+Move\+Test@{ants\+Move\+Test}}
+\index{ants\+Move\+Test@{ants\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{ants\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::ants\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the ants\+Movetest and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, empty, Grid\+::get\+Cell\+Occupant(), Organism\+::move(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a9ba51b5a047d1f970aa50b1c3f07c650}} 
+\index{Tests2@{Tests2}!cell\+Occupant\+Organism\+Tests@{cell\+Occupant\+Organism\+Tests}}
+\index{cell\+Occupant\+Organism\+Tests@{cell\+Occupant\+Organism\+Tests}!Tests2@{Tests2}}
+\subsubsection{cell\+Occupant\+Organism\+Tests()}
+{\footnotesize\ttfamily bool Tests2\+::cell\+Occupant\+Organism\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+References ant, Grid\+::delete\+Organism(), doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::get\+Cell\+Organism(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_ad48c21e18b306f9e54a261f9778e649f}} 
+\index{Tests2@{Tests2}!check\+Neighbors\+Test@{check\+Neighbors\+Test}}
+\index{check\+Neighbors\+Test@{check\+Neighbors\+Test}!Tests2@{Tests2}}
+\subsubsection{check\+Neighbors\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::check\+Neighbors\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the check\+Neighbors\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, Grid\+::check\+Neighbors(), empty, Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), Grid\+::set\+Cell\+Organism(), and unavailable.
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a317dc926bf93038f188c999df7a85682}} 
+\index{Tests2@{Tests2}!doodle\+Breed\+Test@{doodle\+Breed\+Test}}
+\index{doodle\+Breed\+Test@{doodle\+Breed\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Breed\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Breed\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the doodle\+Breed\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References Doodlebug\+::breed(), doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), Grid\+::set\+Cell\+Organism(), and Organism\+::set\+Step\+Count().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_aaf403f9bb7338771173e2053ea4f95fc}} 
+\index{Tests2@{Tests2}!doodle\+Dietest@{doodle\+Dietest}}
+\index{doodle\+Dietest@{doodle\+Dietest}!Tests2@{Tests2}}
+\subsubsection{doodle\+Dietest()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Dietest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the doodle\+Dietest and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_ae35f30e7d95e581cc4ce1316409c71ac}} 
+\index{Tests2@{Tests2}!doodle\+Eat\+Test@{doodle\+Eat\+Test}}
+\index{doodle\+Eat\+Test@{doodle\+Eat\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Eat\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Eat\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the doodle\+Eat\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Doodlebug\+::eat(), Grid\+::get\+Cell\+Occupant(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a2143f2192836626e7214d37b504df381}} 
+\index{Tests2@{Tests2}!doodle\+Move\+Test@{doodle\+Move\+Test}}
+\index{doodle\+Move\+Test@{doodle\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{doodle\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::doodle\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the doodle\+Move\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References doodlebug, Grid\+::get\+Cell\+Occupant(), Doodlebug\+::move(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a7392382310966597d685c8aa3a4a2f88}} 
+\index{Tests2@{Tests2}!do\+Tests@{do\+Tests}}
+\index{do\+Tests@{do\+Tests}!Tests2@{Tests2}}
+\subsubsection{do\+Tests()}
+{\footnotesize\ttfamily bool Tests2\+::do\+Tests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls all of the test functions and returns a boolean value that indicates whether or not all the tests passed or not.
+
+\begin{DoxyReturn}{Returns}
+results A boolean value that reads true if all of the tests passed and false if any of the tests fail. 
+\end{DoxyReturn}
+
+
+References ants\+Breed\+Test(), ants\+Die\+Test(), ants\+Move\+Test(), cell\+Occupant\+Organism\+Tests(), check\+Neighbors\+Test(), doodle\+Breed\+Test(), doodle\+Dietest(), doodle\+Eat\+Test(), doodle\+Move\+Test(), find\+Food\+Test(), find\+Move\+Test(), grid\+Test(), make\+Ants\+Test(), make\+Doodles\+Test(), move\+Organism\+Test(), and print\+Grid\+And\+Cell\+Test().
+
+
+
+Referenced by main().
+
+\mbox{\label{classTests2_a29f005f11c9771786d1dd969aea9b051}} 
+\index{Tests2@{Tests2}!find\+Food\+Test@{find\+Food\+Test}}
+\index{find\+Food\+Test@{find\+Food\+Test}!Tests2@{Tests2}}
+\subsubsection{find\+Food\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::find\+Food\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the find\+Food\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::find\+Food(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_af2a95558f0f9cd28a89c82324576ad2e}} 
+\index{Tests2@{Tests2}!find\+Move\+Test@{find\+Move\+Test}}
+\index{find\+Move\+Test@{find\+Move\+Test}!Tests2@{Tests2}}
+\subsubsection{find\+Move\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::find\+Move\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the find\+Move\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::find\+Move(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_afe90de3a79c4105e63205cb8f019bbb2}} 
+\index{Tests2@{Tests2}!grid\+Test@{grid\+Test}}
+\index{grid\+Test@{grid\+Test}!Tests2@{Tests2}}
+\subsubsection{grid\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::grid\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the grid object and checks whether the grid was instantiated correctly and if the grid sets the occupancy statuses correctly.
+
+\begin{DoxyReturn}{Returns}
+results A boolean value that reads true if the the grid was able to set the cell occupancy statuses correctly. 
+\end{DoxyReturn}
+
+
+References ant, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::set\+Cell\+Occupant(), and Grid\+::$\sim$\+Grid().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_aa4d40396194cf770aa82dc11b449ea62}} 
+\index{Tests2@{Tests2}!make\+Ants\+Test@{make\+Ants\+Test}}
+\index{make\+Ants\+Test@{make\+Ants\+Test}!Tests2@{Tests2}}
+\subsubsection{make\+Ants\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::make\+Ants\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function checks if the ant object were able to be instantiate correctly and if the occupancy status was set correctly.
+
+\begin{DoxyReturn}{Returns}
+result A boolean value that is true if the ant object was instantiated correctly and if its occupancy status was set to ant, and false if this was not done. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::print\+Grid(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a0c6c7e5d60e7c6dc8799fa14e2b997b4}} 
+\index{Tests2@{Tests2}!make\+Doodles\+Test@{make\+Doodles\+Test}}
+\index{make\+Doodles\+Test@{make\+Doodles\+Test}!Tests2@{Tests2}}
+\subsubsection{make\+Doodles\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::make\+Doodles\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the make\+Doodles\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a2ab8e952ccdd1777f6d549ad9409e61b}} 
+\index{Tests2@{Tests2}!move\+Organism\+Test@{move\+Organism\+Test}}
+\index{move\+Organism\+Test@{move\+Organism\+Test}!Tests2@{Tests2}}
+\subsubsection{move\+Organism\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::move\+Organism\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the move\+Organism\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, empty, Grid\+::get\+Cell\+Occupant(), Grid\+::move\+Organism(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+\mbox{\label{classTests2_a5c27bd3a353488311cbc4323d34baa00}} 
+\index{Tests2@{Tests2}!print\+Grid\+And\+Cell\+Test@{print\+Grid\+And\+Cell\+Test}}
+\index{print\+Grid\+And\+Cell\+Test@{print\+Grid\+And\+Cell\+Test}!Tests2@{Tests2}}
+\subsubsection{print\+Grid\+And\+Cell\+Test()}
+{\footnotesize\ttfamily bool Tests2\+::print\+Grid\+And\+Cell\+Test (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function calls the print\+Grid\+Test and the print\+Cell\+Test and returns true if tests pass.
+
+\begin{DoxyReturn}{Returns}
+result true if the tests were able to pass and false if they were not able to pass. 
+\end{DoxyReturn}
+
+
+References ant, doodlebug, Grid\+::get\+Cell(), Cell\+::print\+Cell(), Grid\+::print\+Grid(), Grid\+::set\+Cell\+Occupant(), and Grid\+::set\+Cell\+Organism().
+
+
+
+Referenced by do\+Tests().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Tests2.\+h}\item 
+\textbf{ Tests2.\+cpp}\end{DoxyCompactItemize}

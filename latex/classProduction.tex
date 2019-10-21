@@ -1,0 +1,243 @@
+\section{Production Class Reference}
+\label{classProduction}\index{Production@{Production}}
+
+
+{\ttfamily \#include $<$Production.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Production} (int argc, char $\ast$argv[$\,$])
+\item 
+bool \textbf{ run\+Production} ()
+\item 
+virtual \textbf{ $\sim$\+Production} ()
+\item 
+void \textbf{ play\+One} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ timesteps\+Left} =1000
+\item 
+int \textbf{ times\+Run} = 0
+\item 
+int \textbf{ grid\+Size} = 20
+\item 
+int \textbf{ doodlebugs} = 5
+\item 
+int \textbf{ ants} = 100
+\item 
+int \textbf{ seed} = 1
+\item 
+int \textbf{ pause} = 0
+\item 
+\textbf{ Grid} $\ast$ \textbf{ board}
+\item 
+int \textbf{ new\+Ants} = 0
+\item 
+int \textbf{ new\+Doodlebugs} = 0
+\item 
+int \textbf{ remaining\+Ants} = 0
+\item 
+int \textbf{ remaining\+Doodlebugs} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classProduction_a24439558b7672feaea80dc0ab1b53ff2}} 
+\index{Production@{Production}!Production@{Production}}
+\index{Production@{Production}!Production@{Production}}
+\subsubsection{Production()}
+{\footnotesize\ttfamily Production\+::\+Production (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+Function is the default constructor for a production object that instantiates \doxyref{Production}{p.}{classProduction} object, and sets the timestepsleft to 100. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of words on the command line \\
+\hline
+{\em argv} & Array of pointers to character strings representing the words on the command line. \\
+\hline
+\end{DoxyParams}
+
+
+References ant, ants, board, doodlebug, doodlebugs, empty, Grid\+::get\+Cell\+Occupant(), grid\+Size, pause, Grid\+::print\+Grid(), seed, Grid\+::set\+Cell\+Occupant(), Grid\+::set\+Cell\+Organism(), and timesteps\+Left.
+
+
+
+Referenced by main().
+
+\mbox{\label{classProduction_ab5b3060f9e0a2bc189844e426d693dab}} 
+\index{Production@{Production}!````~Production@{$\sim$\+Production}}
+\index{````~Production@{$\sim$\+Production}!Production@{Production}}
+\subsubsection{$\sim$\+Production()}
+{\footnotesize\ttfamily Production\+::$\sim$\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function is a destructor that takes the production object and deletes it once the program is done using the object. 
+
+Referenced by main().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classProduction_a4948eadf0b30dcc30d02fa9be98d9f6b}} 
+\index{Production@{Production}!play\+One@{play\+One}}
+\index{play\+One@{play\+One}!Production@{Production}}
+\subsubsection{play\+One()}
+{\footnotesize\ttfamily void Production\+::play\+One (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Runs through one iteration of the game. 
+
+References ant, board, Organism\+::breed(), Grid\+::delete\+Organism(), doodlebug, Grid\+::get\+Cell\+Occupant(), Grid\+::get\+Cell\+Organism(), Organism\+::get\+Processed(), Organism\+::get\+Step\+Count(), grid\+Size, Organism\+::move(), new\+Ants, new\+Doodlebugs, Organism\+::set\+Processed(), Organism\+::set\+Step\+Count(), Organism\+::starve(), and times\+Run.
+
+
+
+Referenced by run\+Production().
+
+\mbox{\label{classProduction_a1d66853eafae2580089eff44f12f07ba}} 
+\index{Production@{Production}!run\+Production@{run\+Production}}
+\index{run\+Production@{run\+Production}!Production@{Production}}
+\subsubsection{run\+Production()}
+{\footnotesize\ttfamily bool Production\+::run\+Production (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that runs the production while there are still time steps left.
+
+\begin{DoxyReturn}{Returns}
+result A boolean value true if the production was able to run successfully, and false if the production was not able to run successfully. 
+\end{DoxyReturn}
+
+
+References ant, ants, board, doodlebug, doodlebugs, Grid\+::get\+Cell\+Occupant(), grid\+Size, new\+Ants, new\+Doodlebugs, pause, play\+One(), Grid\+::print\+Grid(), remaining\+Ants, remaining\+Doodlebugs, seed, times\+Run, and timesteps\+Left.
+
+
+
+Referenced by main().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classProduction_aba80c58c0a9aeb31f0b771465695275d}} 
+\index{Production@{Production}!ants@{ants}}
+\index{ants@{ants}!Production@{Production}}
+\subsubsection{ants}
+{\footnotesize\ttfamily int Production\+::ants = 100\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Production(), and run\+Production().
+
+\mbox{\label{classProduction_ab8408abba9ecd29ccb8e1706ff43c0fc}} 
+\index{Production@{Production}!board@{board}}
+\index{board@{board}!Production@{Production}}
+\subsubsection{board}
+{\footnotesize\ttfamily \textbf{ Grid}$\ast$ Production\+::board\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by play\+One(), Production(), and run\+Production().
+
+\mbox{\label{classProduction_ac91f33eade84867c82cfb7ad2a1bf77a}} 
+\index{Production@{Production}!doodlebugs@{doodlebugs}}
+\index{doodlebugs@{doodlebugs}!Production@{Production}}
+\subsubsection{doodlebugs}
+{\footnotesize\ttfamily int Production\+::doodlebugs = 5\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Production(), and run\+Production().
+
+\mbox{\label{classProduction_aec26b656d2e7519d1a1898810bd1c0da}} 
+\index{Production@{Production}!grid\+Size@{grid\+Size}}
+\index{grid\+Size@{grid\+Size}!Production@{Production}}
+\subsubsection{grid\+Size}
+{\footnotesize\ttfamily int Production\+::grid\+Size = 20\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by play\+One(), Production(), and run\+Production().
+
+\mbox{\label{classProduction_a2b06ca154b0c1849f2c402e174715674}} 
+\index{Production@{Production}!new\+Ants@{new\+Ants}}
+\index{new\+Ants@{new\+Ants}!Production@{Production}}
+\subsubsection{new\+Ants}
+{\footnotesize\ttfamily int Production\+::new\+Ants = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by play\+One(), and run\+Production().
+
+\mbox{\label{classProduction_a4d600fde47dc7c71f9339e983947bfaf}} 
+\index{Production@{Production}!new\+Doodlebugs@{new\+Doodlebugs}}
+\index{new\+Doodlebugs@{new\+Doodlebugs}!Production@{Production}}
+\subsubsection{new\+Doodlebugs}
+{\footnotesize\ttfamily int Production\+::new\+Doodlebugs = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by play\+One(), and run\+Production().
+
+\mbox{\label{classProduction_af570feb7415a4d5b1a9176dacd9d6b64}} 
+\index{Production@{Production}!pause@{pause}}
+\index{pause@{pause}!Production@{Production}}
+\subsubsection{pause}
+{\footnotesize\ttfamily int Production\+::pause = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Production(), and run\+Production().
+
+\mbox{\label{classProduction_aabb1ccc17955b39a7bd5e12c60ded94c}} 
+\index{Production@{Production}!remaining\+Ants@{remaining\+Ants}}
+\index{remaining\+Ants@{remaining\+Ants}!Production@{Production}}
+\subsubsection{remaining\+Ants}
+{\footnotesize\ttfamily int Production\+::remaining\+Ants = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by run\+Production().
+
+\mbox{\label{classProduction_a36dd357cae048fb1d8266212362d52dd}} 
+\index{Production@{Production}!remaining\+Doodlebugs@{remaining\+Doodlebugs}}
+\index{remaining\+Doodlebugs@{remaining\+Doodlebugs}!Production@{Production}}
+\subsubsection{remaining\+Doodlebugs}
+{\footnotesize\ttfamily int Production\+::remaining\+Doodlebugs = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by run\+Production().
+
+\mbox{\label{classProduction_adb474287b0143fccb9d440ccc54ba624}} 
+\index{Production@{Production}!seed@{seed}}
+\index{seed@{seed}!Production@{Production}}
+\subsubsection{seed}
+{\footnotesize\ttfamily int Production\+::seed = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Production(), and run\+Production().
+
+\mbox{\label{classProduction_a7634272460cb1dbf7c45d1d306551542}} 
+\index{Production@{Production}!times\+Run@{times\+Run}}
+\index{times\+Run@{times\+Run}!Production@{Production}}
+\subsubsection{times\+Run}
+{\footnotesize\ttfamily int Production\+::times\+Run = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by play\+One(), and run\+Production().
+
+\mbox{\label{classProduction_a5fcf03b482712c458184ae4fd3f8e461}} 
+\index{Production@{Production}!timesteps\+Left@{timesteps\+Left}}
+\index{timesteps\+Left@{timesteps\+Left}!Production@{Production}}
+\subsubsection{timesteps\+Left}
+{\footnotesize\ttfamily int Production\+::timesteps\+Left =1000\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Production(), and run\+Production().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Production.\+h}\item 
+\textbf{ Production.\+cpp}\end{DoxyCompactItemize}

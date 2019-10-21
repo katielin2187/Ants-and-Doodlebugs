@@ -1,0 +1,434 @@
+\section{Organism Class Reference}
+\label{classOrganism}\index{Organism@{Organism}}
+
+
+{\ttfamily \#include $<$Organism.\+h$>$}
+
+Inheritance diagram for Organism\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classOrganism}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism} ()
+\item 
+\textbf{ Organism} (int r, int c)
+\item 
+\textbf{ Organism} (bool b)
+\item 
+bool \textbf{ is\+Prey} ()
+\item 
+virtual bool \textbf{ move} (\textbf{ Grid} $\ast$current)
+\item 
+virtual bool \textbf{ breed} (\textbf{ Grid} $\ast$current)=0
+\item 
+virtual bool \textbf{ eat} (\textbf{ Grid} $\ast$current)
+\item 
+virtual bool \textbf{ starve} ()
+\item 
+void \textbf{ set\+Am\+Ant} (bool b)
+\item 
+int \textbf{ get\+Step\+Count} ()
+\item 
+void \textbf{ set\+Step\+Count} (int s)
+\item 
+void \textbf{ set\+Column} (int c)
+\item 
+void \textbf{ set\+Row} (int r)
+\item 
+int \textbf{ get\+Row} ()
+\item 
+int \textbf{ get\+Column} ()
+\item 
+bool \textbf{ get\+Processed} ()
+\item 
+void \textbf{ set\+Processed} (bool set\+Processed)
+\item 
+virtual \textbf{ $\sim$\+Organism} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \textbf{ row} = 0
+\item 
+int \textbf{ col} = 0
+\item 
+int \textbf{ step\+Count} = 0
+\item 
+bool \textbf{ am\+Ant} = false
+\item 
+bool \textbf{ processed} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classOrganism_aeb16ee24b64839584b4862384d0b53fe}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function is the default constructor for an organism object that instantiates an \doxyref{Organism}{p.}{classOrganism} object. \mbox{\label{classOrganism_aa218274d783df15f6f372ba0df38decf}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Function is another constructor for an organism object that instantiates an \doxyref{Organism}{p.}{classOrganism} object with r rows and c columns.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The row that the organism will be instantiated in. \\
+\hline
+{\em c} & The column that the organism will be instantiated in. \\
+\hline
+\end{DoxyParams}
+
+
+References col, row, and step\+Count.
+
+\mbox{\label{classOrganism_ac7d3dbebaf5df39d0a7883b2d76b4868}} 
+\index{Organism@{Organism}!Organism@{Organism}}
+\index{Organism@{Organism}!Organism@{Organism}}
+\subsubsection{Organism()\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Organism\+::\+Organism (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+Function is another constructor for an organism object that instantiates an \doxyref{Organism}{p.}{classOrganism} object and sets the boolean value am\+Ant to the passes in param b.
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & A boolean value indicating whether an organism is an ant or not. \\
+\hline
+\end{DoxyParams}
+
+
+References am\+Ant.
+
+\mbox{\label{classOrganism_aa5aa2e9fc3134358c929fa0c9d230c3b}} 
+\index{Organism@{Organism}!````~Organism@{$\sim$\+Organism}}
+\index{````~Organism@{$\sim$\+Organism}!Organism@{Organism}}
+\subsubsection{$\sim$\+Organism()}
+{\footnotesize\ttfamily Organism\+::$\sim$\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function is a destructor that takes the \doxyref{Organism}{p.}{classOrganism} object and deletes it once the program is done using the object. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classOrganism_aeecced266ac9dd055a0a0caf57379fb7}} 
+\index{Organism@{Organism}!breed@{breed}}
+\index{breed@{breed}!Organism@{Organism}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily virtual bool Organism\+::breed (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a6aa05cce6d3d7df55d9c3787c01fd9b2}, and \textbf{ Ant} \doxyref{}{p.}{classAnt_ab51f7167f7e9b8e942a1ca5cbcecc3ba}.
+
+
+
+Referenced by Production\+::play\+One().
+
+\mbox{\label{classOrganism_a8305e732b48c3a16dbc83b8a42eaa52a}} 
+\index{Organism@{Organism}!eat@{eat}}
+\index{eat@{eat}!Organism@{Organism}}
+\subsubsection{eat()}
+{\footnotesize\ttfamily bool Organism\+::eat (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function tells whether an organism is a prey.
+
+\begin{DoxyReturn}{Returns}
+false This boolean value holds true for all organism unless ovverrided in child class. 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a00a3a3e9a9b82d6dc9affae5c4e01630}.
+
+\mbox{\label{classOrganism_adb8661020928f339620864b6c2522e52}} 
+\index{Organism@{Organism}!get\+Column@{get\+Column}}
+\index{get\+Column@{get\+Column}!Organism@{Organism}}
+\subsubsection{get\+Column()}
+{\footnotesize\ttfamily int Organism\+::get\+Column (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function returns the current row of the organism.
+
+\begin{DoxyReturn}{Returns}
+row The current row that the organism is in. 
+\end{DoxyReturn}
+
+
+References col.
+
+\mbox{\label{classOrganism_aed896c656998a22cd1d9f216c0225a61}} 
+\index{Organism@{Organism}!get\+Processed@{get\+Processed}}
+\index{get\+Processed@{get\+Processed}!Organism@{Organism}}
+\subsubsection{get\+Processed()}
+{\footnotesize\ttfamily bool Organism\+::get\+Processed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function returns the processed status of the organism.
+
+\begin{DoxyReturn}{Returns}
+row The current processed status of the organism. 
+\end{DoxyReturn}
+
+
+References processed.
+
+
+
+Referenced by Production\+::play\+One().
+
+\mbox{\label{classOrganism_a8189241fd26884ee9c722a081f50387a}} 
+\index{Organism@{Organism}!get\+Row@{get\+Row}}
+\index{get\+Row@{get\+Row}!Organism@{Organism}}
+\subsubsection{get\+Row()}
+{\footnotesize\ttfamily int Organism\+::get\+Row (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function returns the current row of the organism.
+
+\begin{DoxyReturn}{Returns}
+row The current row that the organism is in. 
+\end{DoxyReturn}
+
+
+References row.
+
+\mbox{\label{classOrganism_ab2c39f540ab6883c3038b33357d7e409}} 
+\index{Organism@{Organism}!get\+Step\+Count@{get\+Step\+Count}}
+\index{get\+Step\+Count@{get\+Step\+Count}!Organism@{Organism}}
+\subsubsection{get\+Step\+Count()}
+{\footnotesize\ttfamily int Organism\+::get\+Step\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function returns the current step\+Count of the organism.
+
+\begin{DoxyReturn}{Returns}
+step\+Count A number of steps that the organism has survived for. 
+\end{DoxyReturn}
+
+
+References step\+Count.
+
+
+
+Referenced by Production\+::play\+One().
+
+\mbox{\label{classOrganism_aa5213b2e2b0c4f227dc7dfc4c4ab411c}} 
+\index{Organism@{Organism}!is\+Prey@{is\+Prey}}
+\index{is\+Prey@{is\+Prey}!Organism@{Organism}}
+\subsubsection{is\+Prey()}
+{\footnotesize\ttfamily bool Organism\+::is\+Prey (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function tells whether an organism is a prey.
+
+\begin{DoxyReturn}{Returns}
+status A boolean value that indicates true if an organism is prey and false if the organism is not prey. 
+\end{DoxyReturn}
+
+
+References am\+Ant.
+
+
+
+Referenced by Grid\+::create\+Organism().
+
+\mbox{\label{classOrganism_ad83535a041d8cc6543a8f68c80c14122}} 
+\index{Organism@{Organism}!move@{move}}
+\index{move@{move}!Organism@{Organism}}
+\subsubsection{move()}
+{\footnotesize\ttfamily bool Organism\+::move (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Functions tells whether if the organism can move or not, and then moves it accordingly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & A pointer to the current board that the game is being played on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A boolean value that indicates true if an ant can move and false if the ant cannot move. 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_ae411913efc4e52c0f726c537dacbb778}.
+
+
+
+References col, Grid\+::find\+Move(), Grid\+::move\+Organism(), and row.
+
+
+
+Referenced by Tests2\+::ants\+Move\+Test(), Doodlebug\+::move(), and Production\+::play\+One().
+
+\mbox{\label{classOrganism_aba68f4745f6b0938cf157dcd27df1868}} 
+\index{Organism@{Organism}!set\+Am\+Ant@{set\+Am\+Ant}}
+\index{set\+Am\+Ant@{set\+Am\+Ant}!Organism@{Organism}}
+\subsubsection{set\+Am\+Ant()}
+{\footnotesize\ttfamily void Organism\+::set\+Am\+Ant (\begin{DoxyParamCaption}\item[{bool}]{b }\end{DoxyParamCaption})}
+
+Function sets the organism as an ant. 
+
+References am\+Ant.
+
+\mbox{\label{classOrganism_ace6498f572b31dca3a9e82c8db15d648}} 
+\index{Organism@{Organism}!set\+Column@{set\+Column}}
+\index{set\+Column@{set\+Column}!Organism@{Organism}}
+\subsubsection{set\+Column()}
+{\footnotesize\ttfamily void Organism\+::set\+Column (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+Function sets the current row of the organism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The given row that the organism will be in. \\
+\hline
+\end{DoxyParams}
+
+
+References col.
+
+
+
+Referenced by Grid\+::move\+Organism().
+
+\mbox{\label{classOrganism_a40a6d4617337c88bda0dfeca1e053cbe}} 
+\index{Organism@{Organism}!set\+Processed@{set\+Processed}}
+\index{set\+Processed@{set\+Processed}!Organism@{Organism}}
+\subsubsection{set\+Processed()}
+{\footnotesize\ttfamily void Organism\+::set\+Processed (\begin{DoxyParamCaption}\item[{bool}]{set\+Processed }\end{DoxyParamCaption})}
+
+Function sets the current processed status of the organism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em set\+Processed} & A boolean value indicating what the processed status should be set to. \\
+\hline
+\end{DoxyParams}
+
+
+References processed.
+
+
+
+Referenced by Production\+::play\+One().
+
+\mbox{\label{classOrganism_a8d5178cc3d41e6cf9be613f50776b233}} 
+\index{Organism@{Organism}!set\+Row@{set\+Row}}
+\index{set\+Row@{set\+Row}!Organism@{Organism}}
+\subsubsection{set\+Row()}
+{\footnotesize\ttfamily void Organism\+::set\+Row (\begin{DoxyParamCaption}\item[{int}]{r }\end{DoxyParamCaption})}
+
+Function sets the current row of the organism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The given row that the organism will be in. \\
+\hline
+\end{DoxyParams}
+
+
+References row.
+
+
+
+Referenced by Grid\+::move\+Organism().
+
+\mbox{\label{classOrganism_a0ce8e8fc825caf906ac031907a89cdda}} 
+\index{Organism@{Organism}!set\+Step\+Count@{set\+Step\+Count}}
+\index{set\+Step\+Count@{set\+Step\+Count}!Organism@{Organism}}
+\subsubsection{set\+Step\+Count()}
+{\footnotesize\ttfamily void Organism\+::set\+Step\+Count (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})}
+
+Function sets the current step\+Count of the organism.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & The given number of steps that the organism has survived for. \\
+\hline
+\end{DoxyParams}
+
+
+References step\+Count.
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test(), Tests2\+::doodle\+Breed\+Test(), and Production\+::play\+One().
+
+\mbox{\label{classOrganism_ad1456a1f22de197cc74ca8cf5a1a0189}} 
+\index{Organism@{Organism}!starve@{starve}}
+\index{starve@{starve}!Organism@{Organism}}
+\subsubsection{starve()}
+{\footnotesize\ttfamily bool Organism\+::starve (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Returns whether or not the organism has starved.
+
+\begin{DoxyReturn}{Returns}
+false This boolean value holds true for all organisms, unless overrided in child class. 
+\end{DoxyReturn}
+
+
+Reimplemented in \textbf{ Doodlebug} \doxyref{}{p.}{classDoodlebug_a7f1c26c8458f3811680c778362c0e374}.
+
+
+
+Referenced by Production\+::play\+One().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classOrganism_ab9742ed0a29e19e3c52ba74bdea66b51}} 
+\index{Organism@{Organism}!am\+Ant@{am\+Ant}}
+\index{am\+Ant@{am\+Ant}!Organism@{Organism}}
+\subsubsection{am\+Ant}
+{\footnotesize\ttfamily bool Organism\+::am\+Ant = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by is\+Prey(), Organism(), and set\+Am\+Ant().
+
+\mbox{\label{classOrganism_a8f36f6e8f707ab4bc34e5edd31bfec07}} 
+\index{Organism@{Organism}!col@{col}}
+\index{col@{col}!Organism@{Organism}}
+\subsubsection{col}
+{\footnotesize\ttfamily int Organism\+::col = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by Ant\+::\+Ant(), Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::\+Doodlebug(), Doodlebug\+::eat(), get\+Column(), move(), Organism(), and set\+Column().
+
+\mbox{\label{classOrganism_ab1d5c4cef10f9bcb16d87642c966bb4c}} 
+\index{Organism@{Organism}!processed@{processed}}
+\index{processed@{processed}!Organism@{Organism}}
+\subsubsection{processed}
+{\footnotesize\ttfamily bool Organism\+::processed = false\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by get\+Processed(), and set\+Processed().
+
+\mbox{\label{classOrganism_aa298debd9753da69e00e575f5ab2a73f}} 
+\index{Organism@{Organism}!row@{row}}
+\index{row@{row}!Organism@{Organism}}
+\subsubsection{row}
+{\footnotesize\ttfamily int Organism\+::row = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by Ant\+::\+Ant(), Ant\+::breed(), Doodlebug\+::breed(), Doodlebug\+::\+Doodlebug(), Doodlebug\+::eat(), get\+Row(), move(), Organism(), and set\+Row().
+
+\mbox{\label{classOrganism_a5ebbab8a61a360037633e0d83a056e9f}} 
+\index{Organism@{Organism}!step\+Count@{step\+Count}}
+\index{step\+Count@{step\+Count}!Organism@{Organism}}
+\subsubsection{step\+Count}
+{\footnotesize\ttfamily int Organism\+::step\+Count = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Referenced by Ant\+::breed(), Doodlebug\+::breed(), get\+Step\+Count(), Organism(), and set\+Step\+Count().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism.\+h}\item 
+\textbf{ Organism.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,95 @@
+\section{Ant Class Reference}
+\label{classAnt}\index{Ant@{Ant}}
+
+
+{\ttfamily \#include $<$Ant.\+h$>$}
+
+Inheritance diagram for Ant\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classAnt}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant} ()
+\item 
+\textbf{ Ant} (int r=0, int c=0)
+\item 
+bool \textbf{ breed} (\textbf{ Grid} $\ast$current)
+\item 
+\textbf{ $\sim$\+Ant} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classAnt_ad6c1a8f70419877f7a3e2c9c557f913d}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{Ant()\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function is the default constructor for an \doxyref{Ant}{p.}{classAnt} object that instantiates an \doxyref{Ant}{p.}{classAnt} object. \mbox{\label{classAnt_afcb9b285a5aa4b329e7eb5783970d85f}} 
+\index{Ant@{Ant}!Ant@{Ant}}
+\index{Ant@{Ant}!Ant@{Ant}}
+\subsubsection{Ant()\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Ant\+::\+Ant (\begin{DoxyParamCaption}\item[{int}]{r = {\ttfamily 0},  }\item[{int}]{c = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+Function is another constructor for an \doxyref{Ant}{p.}{classAnt} object that instantiates an \doxyref{Ant}{p.}{classAnt} object and sets the rows to the given parameter r, and sets the columns to the given parameter c.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The row that the ant will be instantiated on. \\
+\hline
+{\em c} & The column that the ant will be instantiated on. \\
+\hline
+\end{DoxyParams}
+
+
+References Organism\+::col, and Organism\+::row.
+
+\mbox{\label{classAnt_a33ca6bd592236726a18a2159908e4116}} 
+\index{Ant@{Ant}!````~Ant@{$\sim$\+Ant}}
+\index{````~Ant@{$\sim$\+Ant}!Ant@{Ant}}
+\subsubsection{$\sim$\+Ant()}
+{\footnotesize\ttfamily Ant\+::$\sim$\+Ant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function is a destructor that takes the \doxyref{Ant}{p.}{classAnt} object and deletes it once the program is done using the object. 
+
+\subsection{Member Function Documentation}
+\mbox{\label{classAnt_ab51f7167f7e9b8e942a1ca5cbcecc3ba}} 
+\index{Ant@{Ant}!breed@{breed}}
+\index{breed@{breed}!Ant@{Ant}}
+\subsubsection{breed()}
+{\footnotesize\ttfamily bool Ant\+::breed (\begin{DoxyParamCaption}\item[{\textbf{ Grid} $\ast$}]{current }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function tells whether if an ant will breed or not.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current} & A pointer to the current board that the game is being played on. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+status A boolean value that indicates true if an ant can breed and false if the ant cannot breed. 
+\end{DoxyReturn}
+
+
+Implements \textbf{ Organism} \doxyref{}{p.}{classOrganism_aeecced266ac9dd055a0a0caf57379fb7}.
+
+
+
+References Organism\+::col, Grid\+::create\+Organism(), Grid\+::find\+Move(), Organism\+::row, and Organism\+::step\+Count.
+
+
+
+Referenced by Tests2\+::ants\+Breed\+Test().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Ant.\+h}\item 
+\textbf{ Ant.\+cpp}\end{DoxyCompactItemize}

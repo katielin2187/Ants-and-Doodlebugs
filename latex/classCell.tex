@@ -1,0 +1,178 @@
+\section{Cell Class Reference}
+\label{classCell}\index{Cell@{Cell}}
+
+
+{\ttfamily \#include $<$Cell.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cell} ()
+\item 
+bool \textbf{ set\+Occupant} (\textbf{ occupation\+Status} g)
+\item 
+\textbf{ occupation\+Status} \textbf{ get\+Occupant} ()
+\item 
+void \textbf{ print\+Cell} ()
+\item 
+\textbf{ Organism} $\ast$ \textbf{ get\+Current\+Organism} ()
+\item 
+\textbf{ Organism} $\ast$ \textbf{ set\+Current\+Organism} (\textbf{ Organism} $\ast$new\+Occupant)
+\item 
+virtual \textbf{ $\sim$\+Cell} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\textbf{ Organism} $\ast$ \textbf{ occupant}
+\item 
+\textbf{ occupation\+Status} \textbf{ guest} = \textbf{ empty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\label{classCell_a394510643e8664cf12b5efaf5cb99f71}} 
+\index{Cell@{Cell}!Cell@{Cell}}
+\index{Cell@{Cell}!Cell@{Cell}}
+\subsubsection{Cell()}
+{\footnotesize\ttfamily Cell\+::\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function is the default constructor for a \doxyref{Cell}{p.}{classCell} object that instantiates a \doxyref{Cell}{p.}{classCell} object with an empty guest. 
+
+References empty, guest, and occupant.
+
+\mbox{\label{classCell_a9fa559f7a28e2b4336c6879ca09304d8}} 
+\index{Cell@{Cell}!````~Cell@{$\sim$\+Cell}}
+\index{````~Cell@{$\sim$\+Cell}!Cell@{Cell}}
+\subsubsection{$\sim$\+Cell()}
+{\footnotesize\ttfamily Cell\+::$\sim$\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Function is a destructor that takes the \doxyref{Cell}{p.}{classCell} object and deletes it once the program is done using the object. 
+
+Referenced by Grid\+::$\sim$\+Grid().
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\label{classCell_a345a66766f6af82f932f2bfc2510ba51}} 
+\index{Cell@{Cell}!get\+Current\+Organism@{get\+Current\+Organism}}
+\index{get\+Current\+Organism@{get\+Current\+Organism}!Cell@{Cell}}
+\subsubsection{get\+Current\+Organism()}
+{\footnotesize\ttfamily \textbf{ Organism} $\ast$ Cell\+::get\+Current\+Organism (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that returns the \doxyref{Cell}{p.}{classCell}\textquotesingle{}s occupant.
+
+\begin{DoxyReturn}{Returns}
+occupant The current occupant of a cell. 
+\end{DoxyReturn}
+
+
+References occupant.
+
+
+
+Referenced by Grid\+::delete\+Organism(), Grid\+::get\+Cell\+Organism(), and Grid\+::move\+Organism().
+
+\mbox{\label{classCell_a7dcb8bc75a2e2591b3fd52b5f7c28ab1}} 
+\index{Cell@{Cell}!get\+Occupant@{get\+Occupant}}
+\index{get\+Occupant@{get\+Occupant}!Cell@{Cell}}
+\subsubsection{get\+Occupant()}
+{\footnotesize\ttfamily \textbf{ occupation\+Status} Cell\+::get\+Occupant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that returns the \doxyref{Cell}{p.}{classCell}\textquotesingle{}s occupancy status.
+
+\begin{DoxyReturn}{Returns}
+guest A value that indicates the occupancy status of a cell. 
+\end{DoxyReturn}
+
+
+References guest.
+
+
+
+Referenced by Grid\+::get\+Cell\+Occupant().
+
+\mbox{\label{classCell_a930a4ccf1ee9f6168c6b72bb0c3a5e8d}} 
+\index{Cell@{Cell}!print\+Cell@{print\+Cell}}
+\index{print\+Cell@{print\+Cell}!Cell@{Cell}}
+\subsubsection{print\+Cell()}
+{\footnotesize\ttfamily void Cell\+::print\+Cell (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Function that prints a character representing the current occupation status of the cell. If the occupation status is ant, this function prints \textquotesingle{}o\textquotesingle{} If the occupation status is a doodlebug, this function prints \textquotesingle{}x\textquotesingle{} If the occupation status is empty, this function prints \textquotesingle{} \textquotesingle{} 
+
+References ant, doodlebug, empty, and guest.
+
+
+
+Referenced by Grid\+::print\+Grid(), and Tests2\+::print\+Grid\+And\+Cell\+Test().
+
+\mbox{\label{classCell_a8e9e7c2dcb9f20238931da684451a9f4}} 
+\index{Cell@{Cell}!set\+Current\+Organism@{set\+Current\+Organism}}
+\index{set\+Current\+Organism@{set\+Current\+Organism}!Cell@{Cell}}
+\subsubsection{set\+Current\+Organism()}
+{\footnotesize\ttfamily \textbf{ Organism} $\ast$ Cell\+::set\+Current\+Organism (\begin{DoxyParamCaption}\item[{\textbf{ Organism} $\ast$}]{new\+Occupant }\end{DoxyParamCaption})}
+
+Function that sets the \doxyref{Cell}{p.}{classCell}\textquotesingle{}s occupant.
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+Occupant} & A pointer to an organism object that the cell\textquotesingle{}s organism will be set to. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+occupant The new occupant of a cell. 
+\end{DoxyReturn}
+
+
+References occupant.
+
+
+
+Referenced by Grid\+::create\+Organism(), Grid\+::delete\+Organism(), Grid\+::move\+Organism(), and Grid\+::set\+Cell\+Organism().
+
+\mbox{\label{classCell_a2346933316b45d87264d50e563c2f895}} 
+\index{Cell@{Cell}!set\+Occupant@{set\+Occupant}}
+\index{set\+Occupant@{set\+Occupant}!Cell@{Cell}}
+\subsubsection{set\+Occupant()}
+{\footnotesize\ttfamily bool Cell\+::set\+Occupant (\begin{DoxyParamCaption}\item[{\textbf{ occupation\+Status}}]{g }\end{DoxyParamCaption})}
+
+Function is a constructor for a cell object that instantiates a cell object and sets the occupancy status to the passed in parameter, g, and returns the result. \begin{DoxyReturn}{Returns}
+result A boolean value that indicates true if the occupant status has been set and false if the status has not been set because the \doxyref{Cell}{p.}{classCell} was occupied. 
+\end{DoxyReturn}
+
+
+References empty, and guest.
+
+
+
+Referenced by Grid\+::create\+Organism(), Grid\+::delete\+Organism(), and Grid\+::set\+Cell\+Occupant().
+
+
+
+\subsection{Field Documentation}
+\mbox{\label{classCell_aafc273a5125cf29742a8df6f5a5a881c}} 
+\index{Cell@{Cell}!guest@{guest}}
+\index{guest@{guest}!Cell@{Cell}}
+\subsubsection{guest}
+{\footnotesize\ttfamily \textbf{ occupation\+Status} Cell\+::guest = \textbf{ empty}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Cell(), get\+Occupant(), print\+Cell(), and set\+Occupant().
+
+\mbox{\label{classCell_a40b81375938f1f13342c34dc1ac692b2}} 
+\index{Cell@{Cell}!occupant@{occupant}}
+\index{occupant@{occupant}!Cell@{Cell}}
+\subsubsection{occupant}
+{\footnotesize\ttfamily \textbf{ Organism}$\ast$ Cell\+::occupant\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Referenced by Cell(), get\+Current\+Organism(), and set\+Current\+Organism().
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\textbf{ Cell.\+h}\item 
+\textbf{ Cell.\+cpp}\end{DoxyCompactItemize}
